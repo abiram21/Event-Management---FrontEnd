@@ -1,0 +1,33 @@
+<body class = "body">
+    <h1>LIGHT</h1>
+        <form class= form [formGroup]= "form" novalidate (ngSubmit) = "save()">
+          
+          <div class="form-group">
+              
+
+
+                <mat-form-field >
+                        <mat-label>Select an option</mat-label>
+                        <mat-select  formControlName="stageSize" [(value)]="selected">
+                          
+                          <mat-option  *ngFor="let stageSize of lightArray" value="{{stageSize.stage_size}}">{{stageSize.stage_size}}</mat-option>
+                          
+                         
+                        </mat-select>
+                        <mat-error *ngIf="form.get('stageSize').hasError('required')">You must select</mat-error>
+                      </mat-form-field>
+
+
+
+
+             
+          </div>
+
+          <div class="button-row">
+           
+              <button mat-raised-button type="submit">Get Quote</button>
+              <button mat-raised-button type="reset" >Cancel</button>
+            </div>
+      </form>    
+      <router-outlet></router-outlet>
+</body>

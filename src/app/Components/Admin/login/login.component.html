@@ -1,0 +1,37 @@
+<body class= "body">
+<mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form class="example-form" [formGroup] = 'form' (ngSubmit)="onsubmit()">
+          <table class="example-full-width" cellspacing="0">
+            <tr>
+              <td>
+                <mat-form-field class="example-full-width">
+                <input matInput placeholder="Username"  name="username" formControlName="username">
+                <mat-error *ngIf="form.get('username').hasError('required')">You must enter the username</mat-error>
+
+                </mat-form-field>
+              </td>
+            </tr>
+            <tr>
+            <td><mat-form-field class="example-full-width">
+              <input matInput placeholder="Password" type="password" name="password" formControlName="password">
+              <mat-error *ngIf="form.get('password').hasError('required')">You must enter the password</mat-error>
+             
+            </mat-form-field></td>
+          </tr></table>
+          <div class="button-row">
+          <button mat-raised-button type="submit" >Login</button>
+          <button mat-raised-button type="reset" >Cancel</button>
+          </div>
+        </form>
+        <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+      </mat-card-content>
+      
+    </mat-card>
+  </body>
+
+    
+   

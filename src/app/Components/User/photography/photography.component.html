@@ -1,0 +1,34 @@
+<body class = "body">
+        <h1>PHOTOGRAPHY</h1>
+    <form class= "form" [formGroup]= "form" novalidate (ngSubmit) = "save()">
+        <div class="form-group"> 
+            <mat-form-field >
+                <mat-label>Select the Duration</mat-label>
+                <mat-select  formControlName="duration" [(value)]="durationselected">
+                  
+                  <mat-option value="Fullday">Fullday</mat-option>
+                  <mat-option value="Halfday">Halfday</mat-option>
+                  
+                 
+                </mat-select>
+                <mat-error *ngIf="form.get('duration').hasError('required')">You must select</mat-error>
+              </mat-form-field>
+
+            </div>
+            <!-- <mat-form-field  >
+                <input formControlName="time"  matInput  placeholder="Enter the Time Duration(Hours)" type="number">
+                <mat-error *ngIf="form.get('time').hasError('min')">Enter a valid Quantity</mat-error>
+                <mat-error *ngIf="form.get('time').hasError('required')">You must enter a value</mat-error>
+              </mat-form-field>
+
+          -->
+        
+      <div class="button-row">
+           
+          <button mat-raised-button type="submit" >Get Quote</button>
+          <button mat-raised-button  type="reset" >Cancel</button>
+        </div>
+
+    </form>
+    <router-outlet></router-outlet>
+</body>

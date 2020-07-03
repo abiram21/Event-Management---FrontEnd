@@ -1,0 +1,99 @@
+<body class="body">
+        <h1>ADD SHORTEAT</h1>
+        <form [formGroup]="form" (ngSubmit)="onsubmit()">
+                <div class="formcontainer">
+                        <div class="form-group ">
+                                <mat-form-field>
+                                        <input formControlName="type" matInput placeholder="Enter the ShortEatType">
+
+                                        <mat-error *ngIf="form.get('type').hasError('required')">You must enter a value
+                                        </mat-error>
+                                        <mat-error *ngIf="form.get('type').hasError('pattern')">You must enter only
+                                                string</mat-error>
+                                </mat-form-field>
+
+
+                        </div>
+                        <div class="form-group " *ngIf="!flag">
+
+                                <mat-form-field>
+                                        <mat-label>Select an option</mat-label>
+                                        <mat-select formControlName="client_id" [(value)]="selected">
+
+                                                <mat-option *ngFor="let phn of phnArray" value="{{phn.id}}">
+                                                        {{phn.phoneNo}}</mat-option>
+
+                                        </mat-select>
+                                        <mat-error *ngIf="form.get('client_id').hasError('required')">You must select
+                                        </mat-error>
+                                </mat-form-field>
+                        </div>
+                </div>
+
+                <div formArrayName="qty">
+                        <div class="container" *ngFor="let item of qtydetails.controls;let i= index"
+                                [formGroupName]='i'>
+                                <div class="form-row">
+                                        <div class="form-group col-md-3">
+                                                <mat-form-field>
+                                                        <input formControlName="minQty" matInput
+                                                                placeholder="Enter the Minimum" type="number">
+                                                        <mat-error
+                                                                *ngIf="item.get('minQty').hasError('required') && !item.get('minQty').hasError('min')">
+                                                                You must enter a value</mat-error>
+                                                        <mat-error *ngIf="item.get('minQty').hasError('min')">Enter a
+                                                                valid Quantity</mat-error>
+                                                </mat-form-field>
+
+
+                                        </div>
+                                        <div class="form-group col-md-3">
+
+                                                <mat-form-field>
+                                                        <input formControlName="maxQty" matInput
+                                                                placeholder="Enter the MaxQty" type="number">
+                                                        <mat-error
+                                                                *ngIf="item.get('maxQty').hasError('required') && !item.get('maxQty').hasError('min')">
+                                                                You must enter a value</mat-error>
+                                                        <mat-error *ngIf="item.get('maxQty').hasError('min')">Enter a
+                                                                valid Quantity</mat-error>
+                                                </mat-form-field>
+
+
+                                        </div>
+                                        <div class="form-group col-md-3">
+
+                                                <mat-form-field>
+                                                        <input formControlName="unit_price" matInput
+                                                                placeholder="Enter the Unit Price" type="number">
+                                                        <mat-error
+                                                                *ngIf="item.get('unit_price').hasError('required') && !item.get('unit_price').hasError('min')">
+                                                                You must enter a value</mat-error>
+                                                        <mat-error *ngIf="item.get('unit_price').hasError('min')">Enter
+                                                                a valid Quantity</mat-error>
+                                                </mat-form-field>
+
+
+                                        </div>
+                                        <div class="form-group col-md-3">
+                                                <span *ngIf="!flag&& i!=0" (click)="removeForm(i)"
+                                                        class="btn btn-danger">-</span>
+                                                <span *ngIf = "flag" (click)="deleteForm(i)" class="btn btn-danger">-</span>
+                                        </div>
+                                </div>
+
+
+                        </div>
+                </div>
+
+                <span *ngIf="!flag" (click)="addForm()" class="btn btn-success">+</span>
+                <div class="button-row">
+
+                        <span *ngIf = "flag" (click)="onUpdate()" class="btn btn-success">Update</span>
+                        <button *ngIf="!flag" mat-raised-button type="submit">Submit</button>
+
+                        <button *ngIf="!flag" mat-raised-button type="reset">Cancel</button>
+                </div>
+        </form>
+
+</body>

@@ -1,0 +1,124 @@
+<body  class = "body">
+        <h1>ADD CHAIR</h1>
+        <div class="addtype">
+                <a href="/addchairtype" class="btn btn-success float-right">Add Type</a>
+            </div>
+<form [formGroup]='form' (ngSubmit)="onsubmit()">
+
+
+    <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.1%" fxLayoutAlign="center">
+        <div fxFlex="20%" *ngFor="let imagePath of imageArray">
+            <img mat-card-image class="img" src="{{imagePath.image}}">
+            <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+                <span fxFlex="50%">Type {{imagePath.type}}</span>
+
+            </mat-card-title>
+        </div>
+    </div>
+
+    <div class="formcontainer">
+    <div class="form-group">
+
+        <mat-form-field>
+            <mat-label>Select an option</mat-label>
+            <mat-select formControlName="type" [value]="selected">
+
+                <mat-option *ngFor="let chair of chairArray" [value]="chair.type">Type {{chair.type}}</mat-option>
+
+
+            </mat-select>
+            <mat-error *ngIf="form.get('type').hasError('required')">You must select</mat-error>
+        </mat-form-field>
+
+    </div>
+
+    <div class="form-group "  *ngIf="!flag">
+            <mat-form-field >
+                    <mat-label>Select an option</mat-label>
+                    <mat-select  formControlName="client_id" [(value)]="phoneNoselected">
+                      
+                      <mat-option  *ngFor="let phn of phnArray" value="{{phn.id}}">{{phn.phoneNo}}</mat-option>
+                     
+                    </mat-select>
+                    <mat-error *ngIf="form.get('client_id').hasError('required')">You must select</mat-error>
+                  </mat-form-field> 
+    </div>
+    </div>
+
+    <div formArrayName="qty">
+        <div class="container" *ngFor="let item of qtydetails.controls;let i= index" [formGroupName]='i'>
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <mat-form-field>
+                        <input formControlName="minQty" matInput placeholder="Enter the Minimum" type="number">
+                        <mat-error
+                            *ngIf="item.get('minQty').hasError('required') && !item.get('minQty').hasError('min')">You
+                            must enter a value</mat-error>
+                        <mat-error *ngIf="item.get('minQty').hasError('min')">Enter a valid Quantity</mat-error>
+                    </mat-form-field>
+
+
+                </div>
+                <div class="form-group col-md-3">
+
+                    <mat-form-field>
+                        <input formControlName="maxQty" matInput placeholder="Enter the MaxQty" type="number">
+                        <mat-error
+                            *ngIf="item.get('maxQty').hasError('required') && !item.get('maxQty').hasError('min')">You
+                            must enter a value</mat-error>
+                        <mat-error *ngIf="item.get('maxQty').hasError('min')">Enter a valid Quantity</mat-error>
+                    </mat-form-field>
+
+
+                </div>
+                <div class="form-group col-md-3">
+
+                    <mat-form-field>
+                        <input formControlName="price_per_uncoveredchair" matInput
+                            placeholder="Price for Uncovered Chairs" type="number">
+                        <mat-error
+                            *ngIf="item.get('price_per_uncoveredchair').hasError('required') && !item.get('price_per_uncoveredchair').hasError('min')">
+                            You must enter a value</mat-error>
+                        <mat-error *ngIf="item.get('price_per_uncoveredchair').hasError('min')">Enter a valid Quantity
+                        </mat-error>
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <mat-form-field>
+                        <input formControlName="price_per_coveredchair" matInput
+                            placeholder="Price for Covered Chair" type="number">
+                        <mat-error
+                            *ngIf="item.get('price_per_coveredchair').hasError('required') && !item.get('price_per_coveredchair').hasError('min')">
+                            You must enter a value</mat-error>
+                        <mat-error *ngIf="item.get('price_per_coveredchair').hasError('min')">Enter a valid Quantity
+                        </mat-error>
+                    </mat-form-field>
+
+
+                </div>
+
+                <div class="form-group col-md-3">
+
+                    <span  *ngIf="!flag && i!=0" (click)="removeForm(i)" class="btn btn-danger" >-</span>
+                    <span *ngIf = "flag" (click)="deleteForm(i)" class="btn btn-danger" >-</span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <span *ngIf="!flag"  (click)="addForm()" class="btn btn-success">+</span>
+    <div class="button-row">
+           
+        <span *ngIf = "flag" (click)="onUpdate()" class="btn btn-success">Update</span>
+            <button  *ngIf="!flag" mat-raised-button type="submit"  >Submit</button>
+            <button  *ngIf="!flag" mat-raised-button type="reset" >Cancel</button>
+          </div>
+</form>
+
+</body>

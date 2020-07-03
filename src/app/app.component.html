@@ -1,0 +1,17 @@
+<app-header></app-header>
+<div class="row" >
+    <div class="col-md-1" *ngIf="isAdmin()">
+        <app-admin-home></app-admin-home>
+    </div>
+<div class="{{isAdmin()? 'col-md-11' : 'col-md-12'}}">
+    <router-outlet></router-outlet>
+</div>
+    
+    
+</div>
+
+
+<!-- <app-addsound></app-addsound>
+<router-outlet></router-outlet> -->
+
+<!-- <app-viewsound></app-viewsound> -->

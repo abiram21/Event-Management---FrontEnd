@@ -1,0 +1,71 @@
+<body  class = "body">
+        <h1>ADD HALLCOVER</h1>
+
+
+
+    <form [formGroup]='form' (ngSubmit)="onsubmit()">
+            <div class="formcontainer">
+        <div class="form-group ">
+            <mat-form-field>
+                <input formControlName="hall_size" matInput placeholder="Enter the Hallsize">
+
+                <mat-error *ngIf="form.get('hall_size').hasError('required')">You must enter a value</mat-error>
+            </mat-form-field>
+
+
+        </div>
+
+
+        <div class="form-group ">
+            <mat-form-field>
+                <input formControlName="colors" matInput placeholder="Enter the available colours">
+
+                <mat-error *ngIf="form.get('colors').hasError('required')">You must enter a value</mat-error>
+                <mat-error *ngIf="form.get('colors').hasError('pattern')">You must enter only string with (',')</mat-error>
+            </mat-form-field>
+
+
+        </div>
+
+        <div class="form-group " *ngIf="!flag">
+
+            <mat-form-field>
+                <mat-label>Select an option</mat-label>
+                <mat-select formControlName="client_id" [(value)]="selected">
+
+                    <mat-option *ngFor="let phn of phnArray" value="{{phn.id}}">{{phn.phoneNo}}</mat-option>
+
+                </mat-select>
+                <mat-error *ngIf="form.get('client_id').hasError('required')">You must select</mat-error>
+            </mat-form-field>
+        </div>
+
+
+
+        <div class="form-group ">
+
+            <mat-form-field>
+                <input formControlName="price" matInput placeholder="Enter the  Price" type="number">
+                <mat-error *ngIf="form.get('price').hasError('required') && !form.get('price').hasError('min')">You
+                    must enter a value</mat-error>
+                <mat-error *ngIf="form.get('price').hasError('min')">Enter a valid Quantity</mat-error>
+            </mat-form-field>
+
+
+        </div>
+        </div>
+
+
+
+        <span *ngIf="flag" (click)="onDelete()" class="btn btn-danger" >Delete</span>
+        <span *ngIf="flag"  (click)="onUpdate()" class="btn btn-success" >update</span>
+        <div class="button-row">
+            
+                <button *ngIf="!flag" mat-raised-button type="submit"  >Submit</button>
+                <button *ngIf="!flag" mat-raised-button type="reset" >Cancel</button>
+              </div>
+    </form>
+    
+</body>
+
+

@@ -1,0 +1,44 @@
+<body class = "body">
+  <h1>FOOD</h1>
+    <form class= "form" [formGroup]= "form" novalidate (ngSubmit) = "save()">
+          <div class="form-group">
+             <mat-form-field >
+                  <mat-label>Select an option</mat-label>
+                  <mat-select  formControlName="foodPreference" [(value)]="selected">
+                    
+                    <mat-option  *ngFor="let food of foodsArray" value="{{food.name}}">{{food.name}}</mat-option>
+                   
+                  </mat-select>
+                  <mat-error *ngIf="form.get('foodPreference').hasError('required')">You must select</mat-error>
+                </mat-form-field>
+          </div>
+    
+          <div class="form-group"> 
+              <mat-form-field  >
+                  <input formControlName="foodQty"  matInput  placeholder="Enter the QTY" type="number">
+                  <mat-error *ngIf="form.get('foodQty').hasError('min')">Enter a valid Quantity</mat-error>
+                  <mat-error *ngIf="form.get('foodQty').hasError('required')">You must enter a value</mat-error>
+                </mat-form-field>
+
+            <!-- <label for="colFormLabel" class="control-label">Quantity</label>
+            <input formControlName="foodQty" type="number" min="0" required class="form-control" id="colFormLabel"  placeholder="Qty"> -->
+          </div>
+    
+          
+         <!-- <div class="row">
+              <div class="col-4">
+                  <input class="btn " [disabled] ="!form.valid"  type="submit" value="Get Quote"  >
+              </div>
+              <div class="col-4">
+                  <input class="btn "  type="button" value="Clear">
+              </div>
+          </div> -->
+          <div class="button-row">
+           
+            <button mat-raised-button type="submit"  >Get Quote</button>
+            <button mat-raised-button type="reset" >Cancel</button>
+          </div>
+      </form>
+      <router-outlet></router-outlet>
+</body>
+

@@ -1,0 +1,131 @@
+.body
+{
+ background: url('/assets/asset/img/chair.jpg');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ position: cover; 
+ height: 586px;
+ overflow:hidden;
+ overflow-y: auto;
+}
+h1 {
+  color: #3F053B;
+  font-family: 'serif';
+  font-style: italic;
+  font-weight: 1000;
+  font-size: 500%;
+  position: relative;
+  left: 120px;
+  top: 5px;
+}
+
+img {
+  border: 1px solid #0D0E0F;
+  border-radius: 10px;
+  padding: 1px;
+  width: 100px;
+  height : 120px;
+}
+::ng-deep .mat-card-title 
+{
+  color: #3F053B;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+ .form
+{
+  padding-top: 7px;
+ 
+  padding-left: 200px;
+   
+} 
+
+
+input[type=number] 
+{
+ 
+  color: #3F053B;
+  font-weight: bold;
+  font-size: 18px;
+  
+
+}
+.mat-raised-button {
+  background-color: #3F053B ;
+ 
+  border-color: D292CC;
+  color: #F2D6F0;
+  padding: 3px 15px;
+  display: inline;
+  font-style: oblique;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button-row button,
+.button-row a {
+  margin-right: 20px;
+  
+  
+}
+.button-row
+{
+  padding-left: 100px;
+}
+
+.card-picture {
+  width: 23%;
+  margin-bottom: 7%;
+}
+
+
+.mat-form-field {
+  width: 60%;
+  
+ 
+  
+}
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: #3F053B !important;
+  font-size: 18px !important;
+  
+  font-weight: bold !important;
+ 
+ }
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #930B8A !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color:#3F053B !important;
+  
+} 
+::ng-deep.mat-select-value {
+  
+ color: #3F053B !important;
+ font-size: 20px !important;
+ font-weight: bold !important;
+ 
+} 
+
+
+
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #3F053B  !important;;
+}
+.inputbox
+{
+  padding-left: 200px;
+  padding-top: 25px;
+}
+
+
+

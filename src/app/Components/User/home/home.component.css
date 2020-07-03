@@ -1,0 +1,25 @@
+.body
+{
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+ overflow:hidden;
+ overflow-y: hidden;
+ 
+}
+mdb-carousel
+{
+  width: 810px;
+    height: 586px;
+    
+}
+/* .mdb-carousel{
+  height:fixed-content;
+  padding-top: auto;
+} */
+.centered {
+  position: absolute;
+  top: 40%;
+  left: 10%;
+  font-size: height*5%;
+}

@@ -1,0 +1,98 @@
+
+<!-- <form [formGroup]="form" (ngSubmit) = "select()">
+    <mat-form-field >
+        <mat-label>Select an option</mat-label>
+        <mat-select  formControlName="facility" [(value)]="selected" (change)="onChange($event.target.value)">
+          
+          <mat-option  *ngFor='let fac of facilityArray' value="{{fac.type}}">{{fac.type}}</mat-option>
+         
+        </mat-select>
+        <mat-error *ngIf="form.get('facility').hasError('required')">You must select</mat-error>
+      </mat-form-field> 
+      <button mat-raised-button type="submit">Select</button>
+  
+    </form> -->
+    
+
+    <!-- <div *ngFor = 'let fac of facilityArray'>
+            <button mat-raised-button (click)="onSubmit(fac.type)" name= "btn" value="{{fac.type}}">{{fac.type}}</button>
+   
+    </div> -->
+
+<ul class=" nav flex-column" >
+     
+      
+<li ngbDropdown class="nav-item dropdown">
+        <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FOODS</a>
+        <div ngbDropdownMenu class="dropdown-menu">
+        <a ngbDropdownItem class="dropdown-item" href="/addfood">ADD</a>
+        <a ngbDropdownItem class="dropdown-item" href="/viewfood">VIEW</a>
+      </div>
+    </li>
+    <li ngbDropdown class="nav-item dropdown">
+      <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CHAIRS</a>
+      <div ngbDropdownMenu class="dropdown-menu">
+        <a ngbDropdownItem class="dropdown-item" href="/addchair">ADD</a>
+        <a ngbDropdownItem class="dropdown-item" href="/viewchair">VIEW</a>
+    </div>
+    </li>
+    <li ngbDropdown class="nav-item dropdown">
+      <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">HALLCOVER</a>
+      <div ngbDropdownMenu class="dropdown-menu">
+        <a ngbDropdownItem class="dropdown-item" href="/addhallcover">ADD</a>
+        <a ngbDropdownItem class="dropdown-item" href="/viewhallcover">VIEW</a>
+      </div>
+  </li>
+  <li ngbDropdown class="nav-item dropdown">
+    <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SHOREATS</a>
+    <div ngbDropdownMenu class="dropdown-menu">
+      <a ngbDropdownItem class="dropdown-item" href="/addshorteat">ADD</a>
+      <a ngbDropdownItem class="dropdown-item" href="/viewshorteat">VIEW</a>
+  </div>
+</li>
+<li ngbDropdown class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">LIGHT</a>
+  <div ngbDropdownMenu class="dropdown-menu">
+    <a ngbDropdownItem class="dropdown-item" href="/addlight">ADD</a>
+    <a ngbDropdownItem class="dropdown-item" href="/viewlight">VIEW</a>
+</div>
+</li>
+<li ngbDropdown class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">SOUND</a>
+  <div ngbDropdownMenu class="dropdown-menu">
+    <a ngbDropdownItem class="dropdown-item" href="/addsound">ADD</a>
+    <a ngbDropdownItem class="dropdown-item" href="/viewsound">VIEW</a>
+</div>
+</li>
+<li ngbDropdown class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">PHOTOGRAPHY</a>
+  <div ngbDropdownMenu class="dropdown-menu">
+    <a ngbDropdownItem class="dropdown-item" href="/addphotography">ADD</a>
+    <a ngbDropdownItem class="dropdown-item" href="/viewphotography">VIEW</a>
+</div>
+</li>
+<li ngbDropdown class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">MEMORIALS</a>
+  <div ngbDropdownMenu class="dropdown-menu">
+    <a ngbDropdownItem class="dropdown-item" href="/addmemorial">ADD</a>
+    <a ngbDropdownItem class="dropdown-item" href="/viewmemorial">VIEW</a>
+</div>
+</li>
+<li ngbDropdown class="nav-item dropdown">
+  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">CLIENTS</a>
+  <div ngbDropdownMenu class="dropdown-menu">
+    <a ngbDropdownItem class="dropdown-item" href="/addclient">ADD</a>
+    <a ngbDropdownItem class="dropdown-item" href="/viewclient">VIEW</a>
+</div>
+</li>
+
+
+
+
+
+
+
+
+
+</ul>
+    

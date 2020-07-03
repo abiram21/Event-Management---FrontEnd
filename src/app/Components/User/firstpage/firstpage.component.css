@@ -1,0 +1,72 @@
+.slide
+{
+  
+ align-items: center;
+ 
+  
+ 
+}
+h1{
+  
+    font-weight: 1000;
+    position: absolute;
+    color:rgb(27, 25, 23) !important;
+    top:250px;
+    
+    left:550px;
+  }
+  
+  h2{
+    font-style: italic;
+    font-weight: 300;
+    position: absolute;
+    font-style: italic;
+    top:350px;
+    left:400px;
+  }
+ .d-block w-100{
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     
+ }
+
+ .img
+ {
+  
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+ }
+
+.mdb-carousel-item
+{
+background-attachment:100%;
+}
+
+.carousel {
+	margin-bottom: 0;
+	
+}
+/* Reposition the controls slightly */
+.carousel-control {
+	left: 0px;
+}
+.carousel-control.right {
+	right: 0px;
+}
+/* Changes the position of the indicators */
+.carousel-indicators {
+	right: 50%;
+	top: auto;
+	bottom: 0px;
+	margin-right: -19px;
+}
+/* Changes the colour of the indicators */
+.carousel-indicators li {
+	background: #111111;
+}
+.carousel-indicators .active {
+background: #0c0c0c;
+}

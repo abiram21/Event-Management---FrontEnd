@@ -1,0 +1,44 @@
+
+ul {
+    
+  background: url('/assets/asset/img/adm.jpg');
+
+    margin: 0;
+  padding: 0;
+  width: 160px;
+  position: fixed;
+  height: 100%;
+ 
+  overflow:hidden;
+  }
+  li {
+    float: left;
+    top: 60px;
+  }
+  li a {
+    display: block;
+    font-size : 12px;
+    padding-top: 20px;
+   
+    color:#808080;
+    font-weight: bold;
+  }
+  li a:hover:not(.active) {
+    background-color: #626264;
+    color:#FFFFFF;
+   
+  }
+  .nav flex-column
+  {
+    margin: 0;
+  padding: 0;
+  width: 200px;
+  }
+  .ngbDropdown:hover .ngbDropdownMenu {
+    display: block;
+  }
+
+
+ 
+  
+  

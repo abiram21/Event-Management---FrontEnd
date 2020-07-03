@@ -1,0 +1,28 @@
+nav {
+   padding : 10px;
+    background-color: #333;
+    
+   
+  }
+  li {
+    float: left;
+  }
+  li a {
+    display: block;
+    font-size : 18px;
+    text-align: center;
+    padding: 12px 16px;
+    color:#808080;
+    font-weight: bold;
+  }
+  li a:hover:not(.active) {
+    background-color: #111;
+    color:#FFFFFF;
+    padding: 12px 16px;
+  }
+  
+
+
+ 
+  
+  

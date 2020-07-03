@@ -1,0 +1,103 @@
+.body
+{
+  background: url('/assets/asset/img/ab.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 2000px;;
+}
+h1 {
+    color: #A4A6A5;
+    padding-left: 50px;
+    font-family: 'serif';
+    font-size: 45px;
+    position: relative;
+    padding-top: 30px;
+    font-weight: bold;
+    font-style: italic;
+  }
+  .formcontainer
+  {
+    padding-left: 50px;
+    padding-top: 30px;
+  }
+  ::ng-deep .mat-form-field-label 
+  {
+    /*change color of label*/
+    color: #F2EDED !important;
+    font-size: 16px !important;
+    font-weight: bold !important;
+    /*font-weight: bold !important;*/
+   
+   }
+  ::ng-deep .mat-focused .mat-form-field-label
+   {
+    /*change color of label*/
+    color: #A4A6A5 !important;
+    font-weight: bold !important;
+   }
+   ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+    background-color: #F2EDED !important;
+    
+  } 
+  ::ng-deep.mat-select-value {
+    
+   color: #F2EDED !important;
+   font-size: 20px;
+   font-weight: bold;
+  } 
+  
+  
+  
+  
+  ::ng-deep.mat-form-field-ripple {
+   /*change color of underline when focused*/
+   background-color: #A4A6A5 !important;;
+  }
+
+  .btn-danger, .btn-success
+  {
+    padding: 3px 25px;
+    font-size: 20px;
+    font-weight: bold;
+   
+  }
+
+  .mat-raised-button {
+    background-color: #F2EDED ;
+   
+    
+    color: #000000;
+    padding: 5px 20px;
+    display: inline;
+    font-style: oblique;
+    font-size: 20px;
+    
+    font-weight: bold;
+  }
+  .button-row button,
+.button-row a {
+  margin-right: 20px;
+  
+  
+}
+.button-row
+{
+    padding-left: 600px;
+  padding-top: 50px;
+}
+.btn-success
+{
+    position: relative;
+}
+input {
+ 
+    color: #F2EDED;
+    font-weight: bold;
+    font-size: 20px;
+  
+ }
+  
+ 
+  
+  

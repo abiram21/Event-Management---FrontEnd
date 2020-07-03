@@ -1,0 +1,64 @@
+<body class= "body">
+    <h1>CHAIR</h1>
+  <div class=" form-row">
+    <form class= form [formGroup]= "form" novalidate (ngSubmit) = "save()">
+       
+        <div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="5%" fxLayoutAlign="center" >
+            <div fxFlex="25%"  *ngFor="let imagePath of imageArray">
+              <img  mat-card-image class="img" src="{{imagePath.image}}">
+              <mat-card-title fxLayout.gt-xs="row" fxLayout.xs="column">
+                <span fxFlex="80%">Type {{imagePath.type}}</span>
+               
+              </mat-card-title>
+            </div>
+        </div>
+
+
+      <div class = "inputbox">
+              <div class="form-group">
+
+                  <mat-form-field >
+                      <mat-label>Select an option</mat-label>
+                      <mat-select  formControlName="type" [(value)]="selected">
+                        
+                        <mat-option  *ngFor="let chair of chairArray" value="{{chair.type}}">Type {{chair.type}}</mat-option>
+                        
+                      
+                      </mat-select>
+                      <mat-error *ngIf="form.get('type').hasError('required')">You must select</mat-error>
+                    </mat-form-field>
+                
+              </div>
+
+            
+              <div class="form-group"> 
+              
+                <mat-form-field  >
+                    <input formControlName="uncoveredChairs"  matInput  placeholder="Uncovered Chairs" type="number">
+                    <mat-error *ngIf="form.get('uncoveredChairs').hasError('min')">Enter a valid Quantity</mat-error>
+                    <mat-error *ngIf="form.get('uncoveredChairs').hasError('required')">You must enter a value</mat-error>
+                  </mat-form-field>
+                
+
+              
+              </div>
+
+              <div class="form-group"> 
+                  <mat-form-field  >
+                      <input formControlName="coveredChairs"  matInput  placeholder="Covered Chairs" type="number">
+                      <mat-error *ngIf="form.get('coveredChairs').hasError('min')">Enter a valid Quantity</mat-error>
+                      <mat-error *ngIf="form.get('coveredChairs').hasError('required')">You must enter a value</mat-error>
+                    </mat-form-field>
+              </div>
+      
+      <div class="button-row">
+           
+          <button mat-raised-button type="submit">Get Quote</button>
+          <button mat-raised-button type="reset" >Cancel</button>
+        </div>
+      </div>
+  </form>
+  </div>   
+
+  <router-outlet></router-outlet>
+</body>

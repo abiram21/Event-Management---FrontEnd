@@ -1,0 +1,86 @@
+.body
+{
+  background: url('/assets/asset/img/vcb.jpg');
+  background-repeat: no-repeat;
+ background-size: 100% 100%;
+ position: cover; 
+ height: 586px;
+ overflow:hidden;
+ overflow-y: auto;
+}
+.zoom {
+  top: 200px;
+  color: #041150;
+ 
+  background: url('/assets/asset/img/lll.jpg');
+  transition: transform .2s;
+  width: 900px;
+  height: 250px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+  border: 2px solid #0D0317;
+  border-radius: 25px;
+ 
+ 
+}
+
+.zoom:hover {
+  -ms-transform: scale(1.1); /* IE 9 */
+  -webkit-transform: scale(1.1); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+
+
+h1 {
+  color: #95A1DC;
+  
+  font-style: italic;
+  font-weight: bold;
+  font-size: 40px;
+  position: relative;
+  padding-left: 100px;
+  margin-bottom: 20px;
+}
+.name
+{
+  padding-left: 100px;
+  font-weight: bold;
+  font-size: 30px;
+}
+.row1
+{
+  padding-left: 100px;
+  font-weight: bold;
+  font-size: 15px;
+}
+.row2
+{
+  padding-left: 100px;
+  padding-right: 10px;
+   padding-top: 60px; 
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.fa
+{
+  color: #041150;
+  font-size: 20px;
+}
+.name
+{
+  color: #0A1340;
+  font-family: 'serif';
+  font-weight: bold;
+}
+.book
+{
+  text-decoration: underline;
+ 
+}
+.totalprice
+{
+  font-size: 26px;
+}

@@ -1,0 +1,131 @@
+.body
+{
+ background: url('/assets/asset/img/memo.jpg');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ position: cover; 
+ height: 586px;
+ overflow:hidden;
+ overflow-y: auto;
+}
+h1 {
+  color: #D0CCCF;
+  font-family: 'serif';
+  font-style: italic;
+  font-weight: 1000;
+  font-size: 500%;
+  position: relative;
+  left: 120px;
+  top: 10px;
+}
+
+img {
+  border: 1px solid #0D0E0F;
+  border-radius: 10px;
+  padding: 1px;
+  width: 100px;
+  height : 120px;
+}
+::ng-deep .mat-card-title 
+{
+  color: #BCB8B7;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+ .form
+{
+  padding-top: 20px;
+ 
+  padding-left: 200px;
+   
+} 
+
+
+input[type=number] 
+{
+ 
+  color: #BCB8B7;
+  font-weight: bold;
+  font-size: 18px;
+  
+
+}
+.mat-raised-button {
+  background-color: #7F7C7B ;
+ 
+  border-color: D292CC;
+  color: #000000;
+  padding: 3px 15px;
+  display: inline;
+  font-style: oblique;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button-row button,
+.button-row a {
+  margin-right: 20px;
+  
+  
+}
+.button-row
+{
+  padding-left: 100px;
+}
+
+.card-picture {
+  width: 23%;
+  margin-bottom: 7%;
+}
+
+
+.mat-form-field {
+  width: 60%;
+  
+ 
+  
+}
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: #BCB8B7 !important;
+  font-size: 18px !important;
+  
+  font-weight: bold !important;
+ 
+ }
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #E8E3E2!important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color:#BCB8B7 !important;
+  
+} 
+::ng-deep.mat-select-value {
+  
+ color: #BCB8B7 !important;
+ font-size: 20px !important;
+ font-weight: bold !important;
+ 
+} 
+
+
+
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #BCB8B7  !important;;
+}
+.inputbox
+{
+  padding-left: 200px;
+  padding-top: 40px;
+}
+
+
+

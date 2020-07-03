@@ -1,0 +1,34 @@
+<body class = "body">
+  <h1>SHORTEATS</h1>
+    <form class= "form" [formGroup]= "form" novalidate (ngSubmit) = "save()">
+      <div class="form-group">
+          <mat-form-field>
+            <mat-label>Select an Option</mat-label>
+            <mat-select formControlName="shorteatspreference" [(value)]="selected">
+             
+              <mat-option  *ngFor="let shorteat of shorteatsArray" value="{{shorteat.type}}">{{shorteat.type}}</mat-option>
+              </mat-select>
+          </mat-form-field>
+      </div>
+
+      <div class="form-group"> 
+          <mat-form-field >
+              <input formControlName="shorteatsQty" matInput type="number" matInput placeholder="Enter the QTY">
+              <mat-error *ngIf="form.get('shorteatsQty').hasError('min')">Enter a valid Quantity</mat-error>
+                  <mat-error *ngIf="form.get('shorteatsQty').hasError('required')">You must enter a value</mat-error>
+            </mat-form-field>
+
+        <!-- <label for="colFormLabel" class="control-label">Quantity</label>
+        <input formControlName="foodQty" type="number" min="0" required class="form-control" id="colFormLabel"  placeholder="Qty"> -->
+      </div>
+
+     
+      <div class="button-row">
+           
+        <button mat-raised-button type="submit"  >Get Quote</button>
+        <button mat-raised-button type="reset" >Cancel</button>
+      </div>
+  </form>
+  <router-outlet></router-outlet>
+</body>
+

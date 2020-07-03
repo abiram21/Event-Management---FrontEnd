@@ -1,0 +1,33 @@
+<nav class="navbar ">
+	
+	<a href="#" class="site-logo">
+		<img src="/assets/asset/img/logo ueos.png" alt="" style="width:100px;height:30px;">
+	</a>
+	
+<ul class="nav justify-content-end" >
+		<li class="nav-item ">
+				<a class="nav-link " href="/">HOME</a>
+			  </li>
+		<li ngbDropdown class="nav-item dropdown">
+		  <a ngbDropdownToggle class="nav-link  dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">FACILITIES</a>
+		  <div ngbDropdownMenu class="dropdown-menu">
+			<a ngbDropdownItem class="dropdown-item" href="/food">FOOD</a>
+			<a ngbDropdownItem class="dropdown-item" href="/chair">CHAIR</a>
+			<a  ngbDropdownItem class="dropdown-item" href="/sound">SOUND</a>
+			<a ngbDropdownItem class="dropdown-item" href="/light">LIGHT</a>
+			<a ngbDropdownItem class="dropdown-item" href="/hallcover">HALLCOVER</a>
+			<a ngbDropdownItem class="dropdown-item" href="/shorteat">SHORTEATS</a>
+			<a ngbDropdownItem class="dropdown-item" href="/memorial">MEMORIAL</a>
+			<a ngbDropdownItem class="dropdown-item" href="/photography">PHOTOGRAPHY</a>
+		  </div>
+		</li>
+		<li class="nav-item ">
+		  <a class="nav-link " href="#">CONTACT US</a>
+		</li>
+		<li class="nav-item ">
+			<a class="nav-link " (click) ="login()"  >{{isAdmin()? 'Logout' : 'Login'}}</a>
+		  </li>
+		
+	  </ul>
+
+</nav>

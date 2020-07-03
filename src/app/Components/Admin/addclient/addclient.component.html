@@ -1,0 +1,76 @@
+<body class = "body">
+    <h1>ADD </h1>
+
+
+<form [formGroup]='form' (ngSubmit)="onsubmit()">
+    <div class="formcontainer">
+    <div class="form-group ">
+        <mat-form-field>
+            <input formControlName="name" matInput placeholder="Enter the Name">
+
+            <mat-error *ngIf="form.get('name').hasError('required')">You must enter a name</mat-error>
+            <mat-error *ngIf="form.get('name').hasError('pattern')">You must enter valid name</mat-error>
+        </mat-form-field>
+
+
+    </div>
+    </div>
+    <div class="formcontainer">
+        <div class="form-group ">
+            <mat-form-field >
+                <textarea formControlName="address" matInput placeholder="Enter the Address"></textarea>
+                 <mat-error *ngIf="form.get('address').hasError('required')">You must enter a name</mat-error>
+                 <mat-error *ngIf="form.get('address').hasError('pattern')">You must enter only string</mat-error>
+              </mat-form-field>
+
+        </div>
+    </div>
+    <div class="form-group " >
+
+           
+                <mat-form-field >
+                    <textarea formControlName="description" matInput placeholder="Enter the description"></textarea>
+                     <mat-error *ngIf="form.get('description').hasError('required')">You must enter a description</mat-error>
+                  </mat-form-field>
+                
+                  
+    </div>
+
+
+    <div class="form-group ">
+
+        <mat-form-field>
+            <input formControlName="email" matInput placeholder="Enter the email">
+            <mat-error *ngIf="form.get('email').hasError('required')">You must enter a email</mat-error>
+                 <mat-error *ngIf="form.get('email').hasError('email')">You must enter a valid email</mat-error>
+
+        </mat-form-field>
+    </div>
+
+
+    <div class="formcontainer">
+        <div class="form-group ">
+            <mat-form-field >
+                    <input formControlName="phone" matInput placeholder="Enter the Contact Number">
+               
+                 <mat-error *ngIf="form.get('phone').hasError('required') && !form.get('phone').hasError('maxLength')">You must enter a contact number</mat-error>
+                 <mat-error *ngIf="form.get('phone').hasError('maxLength')">You must enter a valid email</mat-error>
+              </mat-form-field>
+
+        </div>
+
+
+    </div>
+
+
+    <span *ngIf="flag" (click)="onDelete()" class="btn btn-danger" >Delete</span>
+    <span *ngIf="flag"  (click)="onUpdate()" class="btn btn-success" >update</span>
+
+    <div class="button-row">
+       
+            <button *ngIf="!flag"  mat-raised-button type="submit"  >Submit</button>
+            <button *ngIf="!flag" mat-raised-button type="reset" >Cancel</button>
+          </div>
+</form>
+
+</body>

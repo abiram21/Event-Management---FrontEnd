@@ -1,0 +1,100 @@
+.body
+{
+ background: url('/assets/asset/img/hall.jpg');
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+ position: cover; 
+ height: 586px;
+ overflow:hidden;
+ overflow-y: auto;
+ 
+}
+.form
+{
+  padding-top: 200px;
+  padding-right: 300px;
+  padding-left: 500px;
+   
+} 
+h1 {
+  color: #AEB5F7;
+  font-family: 'serif';
+  font-style: italic;
+  font-weight: 1000;
+  font-size: 600%;
+  position: relative;
+  left: 300px;
+  top: 180px;
+}
+label 
+{
+  font-weight: bold;
+  font-size: 20px;
+  color: #E5E0DA;
+}
+::placeholder 
+{ 
+    color: #640D5B;
+}
+
+.mat-raised-button {
+  background-color: #11173F ;
+ 
+  border-color: D292CC;
+  color: #AAB0DC;
+  padding: 5px 20px;
+  display: inline;
+  font-style: oblique;
+  font-size: 20px;
+  
+  font-weight: bold;
+}
+
+::ng-deep .mat-form-field-label {
+  /*change color of label*/
+  color: #AEB5F7 !important;
+  font-size: 18px !important;
+  
+  /*font-weight: bold !important;*/
+ 
+ }
+::ng-deep .mat-focused .mat-form-field-label {
+  /*change color of label*/
+  color: #11173F !important;
+  font-size: 22px !important;
+  font-weight: bold;
+ }
+
+ ::ng-deep.mat-form-field-underline {
+  /*change color of underline*/
+  background-color: #F2EDED !important;
+  
+} 
+
+
+
+
+::ng-deep.mat-form-field-ripple {
+ /*change color of underline when focused*/
+ background-color: #F2EDED !important;;
+}
+
+.mat-form-field {
+  width: 80%;
+}
+.button-row button,
+.button-row a {
+  margin-right: 12px;
+  
+  
+}
+.button-row
+{
+  padding-left: 100px;
+}
+::ng-deep.mat-select-value {
+  
+  color: #0D1339;
+  font-size: 20px;
+  font-weight: bold;
+ } 

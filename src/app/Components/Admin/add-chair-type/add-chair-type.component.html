@@ -1,0 +1,12 @@
+<body class = "body">
+    <h1>Add ChairType</h1>
+    <form class= "form" [formGroup]= "form" novalidate (ngSubmit) = "save()">
+        <div class="form-group">
+                <mat-form-field  >
+                        <input formControlName="chairType"   type="file">
+                        <!-- <mat-error *ngIf="form.get('foodQty').hasError('min')">Enter a valid Quantity</mat-error>
+                        <mat-error *ngIf="form.get('foodQty').hasError('required')">You must enter a value</mat-error> -->
+                      </mat-form-field>
+        </div>
+        </form>
+    </body>
